@@ -5,7 +5,7 @@ In this assignment you will implement a decision tree that learns while playing.
 
 ## What does it do?
 
-Your output will look something like this:
+Your output will look something like this; with the ``?>`` sequence indicating where the user was asked to type.
 
 ```
 Think of an animal.
