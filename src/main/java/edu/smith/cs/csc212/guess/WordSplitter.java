@@ -22,6 +22,7 @@ public class WordSplitter {
 	 * I'm giving you a version of this that is slightly better than
 	 * the String.split(" ") that I used in lecture.
 	 * 
+	 * @param text - an arbitrary string.
 	 * @return words - the words in the input text.
 	 */
 	public static List<String> splitTextToWords(String text) {

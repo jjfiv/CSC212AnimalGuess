@@ -81,7 +81,14 @@ public class TextInput {
 			}
 			// otherwise go around the loop again.
 		}
+	}
 
+	public String readLine() {
+		try {
+			return input.readLine();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	/**
