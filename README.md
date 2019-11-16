@@ -48,7 +48,19 @@ so that questions added during one session can be saved for later.
 
 Using the provided ``TextInput`` class, you can ask a yes/no question with ``confirm`` and get a line of text from the user with ``readLine``. 
 
-## Step 1: Playing!
+## Rubric (100)
+
+The core adds to 90 points, and there are two 10-point challenges.
+
+### (15) Reflection and Rubric Submitted
+
+There's a [Google Form once again for submitting what you accomplished](https://forms.gle/znWbBi1YHBiG2hR56).
+
+### (15) Code Compiles and Tests Run.
+
+It is very important your code compiles and you do not change the directory structure. If you have issues importing the code into Eclipse, let me know and we can fix it together. I plan to grade these as automatically as possible.
+
+## (15) Step 1: Playing!
 
 This is a guided tree-traversal. The ``TextInput`` object, e.g., ``input.confirm("question?")`` will be of great help to you.
 
@@ -69,7 +81,7 @@ Do you want to play again? (y/n):
 
 This can be done with a loop, OR with recursion.
 
-## Step 2: Updating!
+## (30) Step 2: Updating!
 
 ```
 Welcome to the guessing game!
@@ -103,7 +115,7 @@ Do you want to play again? (y/n):
     1. You can keep track of the ``parent`` of that node so you can insert a new node in either ``yes`` or ``no`` where ``current`` used to be. (Harder in the recursive solution.
     2. You can move the animal in ``current`` to a new node and then turn the original into a question.
 
-## Step 3: Saving the output.
+## (15) Step 3: Saving the output.
 
 Most of the hard work is done for you in the ``TreeIO`` class. Saving and loading a DecisionTree is a recursive algorithm.
 
@@ -111,4 +123,45 @@ Most of the hard work is done for you in the ``TreeIO`` class. Saving and loadin
 2. Modify the code to save the data every time after the user plays the game.
 3. Modify your playing to return a boolean; ``true`` if the computer wins, an ``false`` if the player wins. If the player wins, the data changes; only save the data to the ``knowledge.dat`` file if it has changed.
 
-## Challenge: Print the knowledge variable to a HTML file.
+## (10) Challenge: do the opposite implementation
+
+If you implemented it with loops, also implement it with recursion. If you implemented it first with recursion, also build the loop based version. You will be able to reuse most of the logic you've designed.
+
+## (10) Challenge: Print the knowledge variable to a HTML file.
+
+In HTML, you get to define lists as follows:
+
+```html
+<ul>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ul>
+```
+
+Make a new class that ``TreeIO.load`` the data from the game, and prints it out in the following style; indentation/spacing doesn't matter so much (but is worth bonus points if you get it nice).
+
+```html
+Is it a mammal?
+<ul>
+  <li>YES: Is it tiny?
+    <ul>
+      <li>YES: ANIMAL: Mouse</li>
+      <li>NO: ANIMAL: Elephant</li>
+    </ul>
+  </li>
+  <li>NO: Is it a bird?
+    <ul>
+      <li>YES: Is it nocturnal?
+        <ul>
+          <li>YES: ANIMAL: Owl</li>
+          <li>NO: ANIMAL: Chicken</li>
+        </ul>
+      </li>
+      <li>NO: ANIMAL: Snake</li>
+    </ul>
+  </li>
+</ul>
+```
+
+You can then open and look at the knowledge the game has learned in your browser!
